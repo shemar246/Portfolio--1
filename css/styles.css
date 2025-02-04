@@ -59,6 +59,8 @@ p{
 .container{
     max-width: 1140px;
     margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
 }
 
 @media screen and (min-width: 1024px) {
@@ -507,8 +509,10 @@ a{
 }
 
 @media screen and (min-width: 768px) {
-    .grid--1x2{
+    .grid--1x2,
+    .grid--1x3{
         grid-template-columns: 1fr 1fr;
+        gap: 3rem;
     }
 }
 
@@ -639,6 +643,8 @@ a{
 
 .block__heading{
     margin-top: 0;
+    max-width:auto;
+    text-align: center;
 }
 
 .block--dark{
@@ -652,14 +658,19 @@ a{
     color: #fff;
 }
 
+.block--skewed-left,
+.block--skewed-right{
+    overflow: hidden;
+}
+
 .block--skewed-right{
     padding-bottom: calc(var(--padding-vertical) + 4rem);
-    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 90%)
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 90%);
 }
 
 .block--skewed-left{
     padding-bottom: calc(var(--padding-vertical) + 4rem);
-    clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%)
+    clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
 }
 
 /* Nav Bar */
@@ -738,6 +749,8 @@ a{
 
 .hero__image{
     width: 100%;
+    max-width: 100%;
+    height: auto;
 }
 
 @media screen and (min-width:768px) {
@@ -747,7 +760,8 @@ a{
     }
 
     .hero__content{
-        text-align:left ;
+        text-align: center;
+        padding: 0 1rem;
         align-self: center;
     }
 }
@@ -806,7 +820,9 @@ a{
 }
 
 .feature__image{
+    height: auto;
     width: 100%;
+    max-width: 100%;
 }
 
 @media screen and (min-width:768px) {
@@ -817,6 +833,8 @@ a{
 
 /* Showcase Block */
 .block-showcase__image{
+    height: auto;
+    max-width: 100%;
     width: 100%;
 }
 
